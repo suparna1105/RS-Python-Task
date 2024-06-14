@@ -1,0 +1,6 @@
+from collections import Counter
+
+word = input("Enter a word: ")
+frequency = Counter(word.replace(" ", ""))
+for character, count in frequency.items():
+    print(character, count)

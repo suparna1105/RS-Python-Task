@@ -1,0 +1,31 @@
+def are_anagrams(word1, word2):
+    return sorted(word1) == sorted(word2)
+
+a = input("Enter a word: ")
+b = input("Enter another word: ")
+if are_anagrams(a, b):
+    print("These are anagrams.")
+else:
+    print("Not anagrams.")
+from collections import Counter
+
+strng = input("Enter a word: ")
+frequency = Counter(strng.replace(" ", ""))
+print(frequency)
+num = input("Enter an integer: ")
+next_num = str(int(num) + 1)
+print("The final list is ", list(next_num))
+def is_prime(n):
+    return n > 1 and all(n % i for i in range(2, int(n**0.5) + 1))
+
+a = input("Enter the elements of the list: ").split()
+prime_list = [int(num) for num in a if is_prime(int(num))]
+print("The prime numbers in the list are", prime_list)
+if prime_list:
+    difference = max(prime_list) - min(prime_list)
+    print("The difference is", difference)
+strng = input("Enter elements of the list: ")
+unique_chars = set(strng.replace(" ", ""))
+char_count = {char: strng.count(char) for char in unique_chars}
+print(char_count)
+

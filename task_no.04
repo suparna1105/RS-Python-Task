@@ -1,0 +1,16 @@
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def prime_difference(arr):
+    primes = [num for num in arr if is_prime(num)]
+    if not primes:
+        return "No prime numbers found."
+    return max(primes) - min(primes)
+
+A = [29, 37, 12, 18, 43, 8, 11, 25]
+print(prime_difference(A))

@@ -9,8 +9,9 @@ def is_prime(num):
 def prime_difference(arr):
     primes = [num for num in arr if is_prime(num)]
     if not primes:
-        return "No prime numbers found."
+        return 1
     return max(primes) - min(primes)
 
-A = [29, 37, 12, 18, 43, 8, 11, 25]
+N = int(input("Enter number of elements: "))
+A = list(map(int, input("Enter the elements: ").split()))
 print(prime_difference(A))
